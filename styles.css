@@ -39,19 +39,30 @@ body{
     font-family: a;
     font-weight: bold;
     color: hsl(0, 1%, 44%);
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 20px;
 
 }
 #a{
-    padding-right: 94px;
+    padding-right: 102px;
 }
 #b{
-    padding-right: 74px;
+    padding-right: 85px;
 }
-.flex-item2 *{
-    height: 50px;
-    width: 100px;
+.flex-item2{
+        display: grid;
+        grid-template-columns: 133px 133px 133px;
+        column-gap: 14px;
+        grid-template-rows: 50px 7px;
+}
+
+.flex-item2 p{
+    font-family: c;
+    color: hsl(0, 100%, 67%);
+    font-size: 10px;
+    margin-bottom: 0px;
+    padding-bottom: -30px;
+    visibility: hidden;
 }
 img{
     height: 45px;
@@ -62,6 +73,10 @@ img{
     display: inline;
     position: relative;
     left: 450px;
+}
+img:hover{
+    background-color: black;
+    cursor: pointer;
 }
 hr{
     display: inline-flex;
@@ -74,36 +89,62 @@ hr{
     display: flex;
     flex-direction: row;
     margin-left: 0px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 input {
     font-size: 22px;
     padding-left: 10px;
     font-weight: bolder;
     font-family: a;
-
 }
+input:focus {
+    outline: none !important;
+    border: 1px solid hsl(259, 100%, 65%) !important;
+    border-radius: 2px;
+}
+input:hover{
+    cursor:pointer;
+}
+
 .last{
     font-size: 70px;
     font-weight: bolder;
     font-family: b;
-    margin-top: -80px;
+    margin-top: -90px;
 }
 .last *{
 
     margin-bottom: -100px;
 }
-.flex-item3{
-    display: flex;
-    flex-direction: row;
-    font-family: c;
-    color: hsl(0, 100%, 67%);
-    font-size: 12px;
-    margin-top: -0px;
-    font-size: 10px;
-    margin-bottom:-20px ;
-}
-.flex-item3 *{
-    padding-right: 20px;
-    display: none;
+
+@media (max-width: 768px) {
+    .flex-container{
+        width: 450px;
+        height: 500px;
+    }
+    .flex-item2{
+        grid-template-columns: 120px 120px 120px;
+        column-gap: 10px;
+    }
+    .flex-item2 input{
+        border-radius: 10px;
+        border: 1px solid hsl(0, 1%, 44%);
+    }
+    #a{
+        padding-right: 86px;
+    }
+    #b{
+        padding-right: 67px;
+    }
+    img{
+        left: 153px;
+    }
+    hr{
+        width: 360px;
+    }
+    .last{
+        margin-left: 2px;
+    }
+
+
 }
