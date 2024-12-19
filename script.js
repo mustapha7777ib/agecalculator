@@ -45,6 +45,10 @@ $("#image").on("click", function() {
                 q = false;
                 break;
             }
+            else{
+                $("#e").css("visibility","hidden");
+                $("#f").css("visibility","hidden");
+            }
         }
         if (yearValue > 2024 || yearValue<0) {
             invalidyear();
@@ -52,6 +56,10 @@ $("#image").on("click", function() {
             $(".span2").text("--");
             $(".span3").text("--"); 
             q = false;
+        }
+        else{
+            $("#d").css("visibility","hidden");
+            $("#e").css("visibility","hidden");
         }
         if(monthValue > 12 || monthValue < 1){
             invalidmonth();
